@@ -13,12 +13,11 @@ In the first step, the previously cleaned SMS data was loaded from a CSV file us
 
 2. Fine-tuning Configuration:
 The fine-tuning parameters were defined in the code as follows:
-
-model_checkpoint = 'mshenoda/roberta-spam': Selection of the pre-trained RoBERT model for fine-tuning.
-batch_size = 16: The size of the batch used in training.
+a) model_checkpoint = 'mshenoda/roberta-spam': Selection of the pre-trained RoBERT model for fine-tuning.
+b) batch_size = 16: The size of the batch used in training.
 Tokenization of the SMS text was done using the AutoTokenizer class from the transformers library. A transformer function was defined that performs the tokenization of the text using a previously initialized tokenizer.
 
-3. Training Configuration:
+4. Training Configuration:
 The RoBERT model was then initialized using the AutoModelForSequenceClassification class, where the number of labels (in this case 2 for binary classification) was passed as an argument. The training parameters were configured using the TrainingArguments class. The key parameters are:
 
 evaluation_strategy='epoch': Evaluation strategy after each epoch.
