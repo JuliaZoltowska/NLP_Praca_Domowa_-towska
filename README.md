@@ -48,7 +48,11 @@ This process resulted in a model capable of correctly classifying SMS as spam or
 # 3. Instructions
 There are 2 jupyter files on the repository. In 1 there is presentation of data distribution, data cleaning, built model using LSTM recurrent network, built model using CNN network and model with pre-trained word embeddings. For all of them, too, functions have been created that use the trained model and return a result for the passed single sentence(s) in the form of a message telling the user whether the text is spam or not.
 
-The second file contains the described model with a fine-tuning of the Robert-spam language model also with a function that uses the trained model and returns the result for the passed single sentence(s) in the form of a message informing the user whether the text is spam or not.
+The second file contains the described model with a fine-tuning of the Robert-spam language model also with a function that uses the trained model and returns the result for the passed single sentence(s) in the form of a message informing the user whether the text is spam or not.  In order to demonstrate the skills, it was created:
+
+- LSTM and CNN model using the tensorflow library,
+
+- model with pretrained embbedding and roberta-spam fine tuning model using the Pytorch library.
 
 # Please fire up the jupiter notebook with 3 models first, as it contains Exploratory Data Analysis and Data Preparation. 
 
