@@ -1,7 +1,7 @@
 # NLP_Praca_Domowa_-towska
 Homework with NLP 
 # 1.Dataset
-The SMS Spam Collection v.1 is a set of SMS messages that have been collected and labeled as either spam or not spam. This dataset contains 5574 English, real, and non-encoded messages. The SMS messages are thought-provoking and eye-catching. There is 2 columns: sms (The text of the SMS message (String)) and label (The label for the SMS message, indicating whether it is ham or spam. (String)).
+The SMS Spam Collection v.1 is a set of SMS messages that have been collected and labeled as either spam or not spam. This dataset contains 5574 English, real, and non-encoded messages. The SMS messages are thought-provoking and eye-catching. There are 2 columns: sms (the text of the SMS message (String)) and label (the label for the SMS message, indicating whether it is ham (0) or spam (1). (String)). There is 5171 unique values.
 Link to dataset: https://www.kaggle.com/datasets/thedevastator/sms-spam-collection-a-more-diverse-dataset
 
 # 2. Model description Roberta-spam Model Fine tunning
