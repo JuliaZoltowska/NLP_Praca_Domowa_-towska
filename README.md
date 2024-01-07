@@ -50,7 +50,7 @@ There are 2 jupyter files on the repository. In 1 there is presentation of data 
 
 The second file contains the described model with a fine-tuning of the Robert-spam language model also with a function that uses the trained model and returns the result for the passed single sentence(s) in the form of a message informing the user whether the text is spam or not.
 
-Please fire up the jupiter notebook with 3 models first, as it contains Exploratory Data Analysis and Data Preparation. 
+# Please fire up the jupiter notebook with 3 models first, as it contains Exploratory Data Analysis and Data Preparation. 
 
 
 
