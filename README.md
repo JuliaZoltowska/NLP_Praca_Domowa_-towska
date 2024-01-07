@@ -8,36 +8,36 @@ Link to dataset: https://www.kaggle.com/datasets/thedevastator/sms-spam-collecti
 
 This script demonstrates the entire pipeline of fine-tuning a RoBERTa model for spam classification using the Hugging Face Transformers library and the Datasets library. It includes data preparation, fine-tuning configuration, training configuration, trainer initialization, training and testing. Link to model: https://huggingface.co/mshenoda/roberta-spam
 
-1. Data Preparation:
+## 1. Data Preparation:
 In the first step, the previously cleaned SMS data was loaded from a CSV file using the pandas library. The data was transformed into a Dataset object using the datasets library from Hugging Face. The dataset was then split into a training set and a test set, and the split was 10%.
 
-2. Fine-tuning Configuration:
+## 2. Fine-tuning Configuration:
 The fine-tuning parameters were defined in the code as follows:
-a) model_checkpoint = 'mshenoda/roberta-spam': Selection of the pre-trained RoBERT model for fine-tuning.
-b) batch_size = 16: The size of the batch used in training.
+### a) model_checkpoint = 'mshenoda/roberta-spam': Selection of the pre-trained RoBERT model for fine-tuning.
+### b) batch_size = 16: The size of the batch used in training.
 Tokenization of the SMS text was done using the AutoTokenizer class from the transformers library. A transformer function was defined that performs the tokenization of the text using a previously initialized tokenizer.
 
-4. Training Configuration:
+## 4. Training Configuration:
 The RoBERT model was then initialized using the AutoModelForSequenceClassification class, where the number of labels (in this case 2 for binary classification) was passed as an argument. The training parameters were configured using the TrainingArguments class. The key parameters are:
 
-evaluation_strategy='epoch': Evaluation strategy after each epoch.
-save_strategy='epoch': Save the model after each epoch.
-learning_rate=2e-5: The learning rate.
-per_device_train_batch_size=batch_size: Size of the training batch.
-per_device_eval_batch_size=batch_size: Size of the test batch.
-num_train_epochs=5: Number of training epochs.
-weight_decay=0.01: Weight reduction factor.
-load_best_model_at_end=True: Loads the best model at the end of training.
-metric_for_best_model='accuracy': Metric used to select the best model.
+### evaluation_strategy='epoch': Evaluation strategy after each epoch.
+### save_strategy='epoch': Save the model after each epoch.
+### learning_rate=2e-5: The learning rate.
+### per_device_train_batch_size=batch_size: Size of the training batch.
+### per_device_eval_batch_size=batch_size: Size of the test batch.
+### num_train_epochs=5: Number of training epochs.
+### weight_decay=0.01: Weight reduction factor.
+### load_best_model_at_end=True: Loads the best model at the end of training.
+### metric_for_best_model='accuracy': Metric used to select the best model.
 
-4. Trainer initialization:
+## 4. Trainer initialization:
 An object of the Trainer class has been created, using the initialized model, training arguments, training set, test set, tokenizer and a function that calculates metrics (in this case, accuracy).
 
-5. Training:
+## 5. Training:
 After setting up the model and training parameters, model evaluation was performed on a small subset of the training data using the trainer.evaluate() method. Then training of the model was run using the trainer.train() method.
 
 
-6. Testing the Model:
+## 6. Testing the Model:
 
 Finally, the trained model was tested by giving it a sample SMS text.The text was tokenized, converted to PyTorch tensors, and then the model was inferred to determine whether the text was correctly classified as spam or not.
 
