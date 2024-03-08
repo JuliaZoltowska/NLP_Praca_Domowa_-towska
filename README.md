@@ -1,5 +1,5 @@
 # SPAM DETECTOR SMS
-Homework with NLP 
+ 
 # 1.Dataset
 The SMS Spam Collection v.1 is a set of SMS messages that have been collected and labeled as either spam or not spam. This dataset contains 5574 English, real, and non-encoded messages. The SMS messages are thought-provoking and eye-catching. There are 2 columns: sms (the text of the SMS message (String)) and label (the label for the SMS message, indicating whether it is ham (0) or spam (1). (String)). 
 Link to dataset: https://www.kaggle.com/datasets/thedevastator/sms-spam-collection-a-more-diverse-dataset
