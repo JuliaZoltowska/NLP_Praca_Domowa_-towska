@@ -17,7 +17,7 @@ The fine-tuning parameters were defined in the code as follows:
 ### b) batch_size = 16: The size of the batch used in training.
 Tokenization of the SMS text was done using the AutoTokenizer class from the transformers library. A transformer function was defined that performs the tokenization of the text using a previously initialized tokenizer.
 
-## 4. Training Configuration:
+## 3. Training Configuration:
 The RoBERT model was then initialized using the AutoModelForSequenceClassification class, where the number of labels (in this case 2 for binary classification) was passed as an argument. The training parameters were configured using the TrainingArguments class. The key parameters are:
 
 ### evaluation_strategy='epoch': Evaluation strategy after each epoch.
@@ -43,12 +43,12 @@ Finally, the trained model was tested by giving it a sample SMS text.The text wa
 
 This process resulted in a model capable of correctly classifying SMS as spam or not.
 
-# 3. 3 Models (LSTM, CNN Model, RNN with DistilBERT)
+## 3. 3 Models (LSTM, CNN Model, RNN with DistilBERT)
 The repository includes the following deep learning models:
 
-LSTM Model: Trained on sequential data using Long Short-Term Memory (LSTM) cells.
-CNN Model: Convolutional Neural Network (CNN) architecture for text classification.
-PyTorch RNN with DistilBERT: A Recurrent Neural Network (RNN) with pre-trained word embeddings using DistilBERT.
+### a) LSTM Model: Trained on sequential data using Long Short-Term Memory (LSTM) cells.
+### b) CNN Model: Convolutional Neural Network (CNN) architecture for text classification.
+### c) PyTorch RNN with DistilBERT: A Recurrent Neural Network (RNN) with pre-trained word embeddings using DistilBERT.
 
 # 4. Instructions
 There are 2 jupyter files on the repository. In 1 there is presentation of data distribution, data cleaning, built model using LSTM recurrent network, built model using CNN network and model with pre-trained word embeddings. For all of them, too, functions have been created that use the trained model and return a result for the passed single sentence(s) in the form of a message telling the user whether the text is spam or not.
